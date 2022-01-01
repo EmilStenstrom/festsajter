@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap" rel="stylesheet">
+<style>
+    body, h1 {
+        font-family: 'Overpass', cursive;
+    }
+    body {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(bg.jpg);
+        color: white;
+        font-size: 1.6em;
+        padding: 1em;
+        text-align: center;
+    }
+    h1, h2 {
+        font-size: 1.4em;
+        text-shadow: 2px 2px black;
+        text-decoration: underline wavy 2px;
+        text-decoration-skip-ink: none;
+    }
+    h1 {
+        font-size: 1.7em;
+        color: rgb(255, 49, 221);
+    }
+    button {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px black;
+        background:rgb(255, 210, 125);
+        font-size: 0.4em;
+        padding: 0.3em 1em;
+        text-transform: uppercase;
+    }
+    h2 { color: rgb(255, 210, 125); }
+    h2 small {
+        font-size: 0.4em;
+        display: inline-block;
+        text-align: right;
+    }
+    p, dl {
+        max-width: 16em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img {
+        max-width: 100%;
+        border: 3px solid transparent;
+        border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+        border-image-slice: 1;
+    }
+    dl {
+        background: rgba(0,0,0,0.4);
+        padding: 0.5em;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        text-align: left;
+    }
+    dl.light {
+        background: rgba(136, 145, 58, 0.4);
+    }
+    dt {
+        width: 33%;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+    dd {
+        margin-left: auto;
+        font-size: 0.8em;
+        width: 66%;
+        margin-bottom: 0.5em;
+    }
+    dd:last-of-type, dt:last-of-type { margin-bottom: 0 }
+    a {
+        color: rgb(44, 187, 39);
+        font-weight: bold;
+    }
+</style>
+<h1>Välkommen på 40-årsfest! 🎉</h1>
+<p>Jag vill fira min dag med er, kära vänner 😎! Det blir en hejdundrande hemmafest med trevliga människor att prata med, och något gott att dricka 🍹 och äta 🍕.</p>
+
+<button onclick="shoot()">Mer confetti</button>
+
+<dl>
+    <dt>När?</dt>
+    <dd><b>15:e jan, 19.00</b> 📅</dd>
+    <dt>Var?</dt>
+    <dd><a href="https://www.google.com/maps/place/Sylvestergatan+8D,+125+71+%C3%84lvsj%C3%B6/">Sylvestergatan 8D, Älvsjö</a></dd>
+    <dt>Barn?</dt>
+    <dd>Inte denna gång! 🧒</dd>
+    <dt>Klädsel?</dt>
+    <dd><b>En valfri hatt!</b> 🎩 Finns partyhattar på plats om du glömmer.</dd>
+    <dt>Covid?</dt>
+    <dd>Jag vill att du är fullvaccinerad 💉💉 och symtomfri 🤒</dd>
+</dl>
+
+<h2>Hitta hit 🧭</h2>
+
+<dl class="light">
+    <dt>🚌 Buss</dt>
+    <dd>Enklast är att kolla med <a href="https://sl.se/">SL</a> vilken den snabbaste vägen är. Det går bussar från Gullmarsplan, Liljeholmen och Årstaberg till stationer nära oss.</dd>
+    <dt>🚕 Taxi</dt>
+    <dd>Sylvestergatan 8D, Älvsjö.</dd>
+    <dt>🏎️ Bil</dt>
+    <dd>Det finns plats för en bild direkt utanför vår grind, och ytterligare 2-3 gästparkeringsplatser i föreningen (se nedan).</dd>
+</dl>
+
+<img src="parkering.jpg">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script>
+    function shoot() {
+        confetti({
+            particleCount: 200,
+            spread: 70,
+            origin: { y: 0.5 },
+            ticks: 400
+        });
+    }
+
+    shoot();
+</script>
